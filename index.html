@@ -710,8 +710,8 @@ if(location.hash==='#story') document.addEventListener('DOMContentLoaded',show);
      lecture03 summary, Elsere L3 notes. Where sources clash, both versions are shown.
      Opened by #bBrief in the top bar, .lb-open buttons, or the #lectures hash. Links close the tab and open the full branch. -->
 <style>
-.lb{position:fixed;inset:0;z-index:41;background:var(--bg);display:flex;flex-direction:column}
-.lb[hidden]{display:none}
+.lbr{position:fixed;inset:0;z-index:41;background:var(--bg);display:flex;flex-direction:column}
+.lbr[hidden]{display:none}
 .lb-top{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:8px 12px;background:var(--panel);border-bottom:1px solid var(--line);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 .lb-top b{font-size:15px;margin-right:auto}
 .lb-top button{font:13px system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:5px 11px;cursor:pointer;max-width:100%}
@@ -735,10 +735,10 @@ if(location.hash==='#story') document.addEventListener('DOMContentLoaded',show);
   .lb-top button{font-size:12px;padding:4px 8px}
   .lb-art{padding:10px 16px 80px}
 }
-@media print{.lb{display:none!important}}
+@media print{.lbr{display:none!important}}
 </style>
 
-<div id="lbrief" class="lb noprint" hidden role="dialog" aria-label="Each lecture in short points">
+<div id="lbrief" class="lbr noprint" hidden role="dialog" aria-label="Each lecture in short points">
 <div class="lb-top">
   <b>Lectures in brief</b>
   <button data-lbgo="lb1">L1</button><button data-lbgo="lb2">L2</button><button data-lbgo="lb3">L3</button>
