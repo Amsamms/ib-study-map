@@ -300,7 +300,7 @@ body.core details.x, body.core figure.ph, body.core .booklet, body.core .modern,
 .mm-panel p{margin:6px 0;font-size:15.5px;line-height:1.55}
 .mm-panel .x{position:absolute;right:10px;top:10px;width:30px;height:30px;padding:0}
 .mm-panel .story{background:var(--memo);border-radius:8px;padding:8px 10px;margin:4px 0 8px}
-.mm-panel .story .st{font:700 12px system-ui,sans-serif;color:var(--soft);text-transform:uppercase;letter-spacing:.04em}
+.mm-panel .story .mm-st{font:700 12px system-ui,sans-serif;color:var(--soft);text-transform:uppercase;letter-spacing:.04em}
 .mm-panel h4{margin:12px 0 4px;font:700 13px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:var(--soft)}
 .mm-panel ul{list-style:none;padding:0;margin:0}
 .mm-panel li{margin:6px 0;font-size:14.5px;line-height:1.45}
@@ -565,7 +565,7 @@ function arc(a,b,col,wd,dash){
 function select(id,fromTap){
   sel=id; if(fromTap&&step>=0&&MM_STORY[step][0]!==id) step=-1;
   var n=BYID[id], h='<button class="x" aria-label="Close">&#215;</button>';
-  if(step>=0) h+='<div class="story"><div class="st">The story, step '+(step+1)+' of '+MM_STORY.length+'</div><p>'+esc(MM_STORY[step][1])+'</p></div>';
+  if(step>=0) h+='<div class="story"><div class="mm-st">The story, step '+(step+1)+' of '+MM_STORY.length+'</div><p>'+esc(MM_STORY[step][1])+'</p></div>';
   h+='<div class="tags">'+(n.d?(n.lec[0]===0?'Coming later (not taught yet)':'Lecture '+n.lec.join(', ')):'The whole course')+'</div><h3>'+esc(n.t)+'</h3><p>'+esc(n.s)+'</p>';
   var ls=LINKS[id]||[];
   if(ls.length){h+='<h4>How it connects</h4><ul>'; ls.forEach(function(l){h+='<li><button data-go="'+l[0]+'">'+esc(BYID[l[0]].t)+'</button>'+esc(l[1])+'</li>'}); h+='</ul><p class="tags">"(my link)" = my explanation of the connection, not something he said.</p>'}
